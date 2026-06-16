@@ -6,9 +6,10 @@ const NAV_LINKS = [
   { label: 'The Insight', href: '#the-insight' },
   { label: 'Now For You', href: '#now-for-you' },
   { label: 'Roadmap', href: '#roadmap' },
+  { label: 'Sources', href: '#sources' },
 ]
 
-const SECTION_IDS = ['the-brand', 'the-problem', 'the-insight', 'now-for-you', 'roadmap']
+const SECTION_IDS = ['the-brand', 'the-problem', 'the-insight', 'now-for-you', 'roadmap', 'sources']
 
 export default function Nav() {
   const [activeSection, setActiveSection] = useState('')

@@ -1,31 +1,38 @@
 import FadeIn from './FadeIn'
+import Footnote from './Footnote'
 
 const CARDS = [
   {
     num: '01',
     headline: 'The Wedge',
     stat: '2019',
+    statFootnote: null,
     context: 'No organised brand owned silver. GIVA stepped in.',
+    contextFootnote: null,
   },
   {
     num: '02',
     headline: 'The Engine',
     stat: 'Rs.518 Cr',
+    statFootnote: 1,
     context: 'Built almost entirely on gifting occasions in FY25.',
+    contextFootnote: 1,
   },
   {
     num: '03',
     headline: 'The Ambition',
     stat: 'Series C',
+    statFootnote: 2,
     context: 'Creaegis bet explicitly on everyday wear, not on gifting.',
+    contextFootnote: 2,
   },
 ]
 
 const STATS = [
-  { value: '300+', label: 'stores nationwide' },
-  { value: '50/50', label: 'online to offline split' },
-  { value: '5 to 6 months', label: 'gifting repurchase cycle' },
-  { value: 'Rs.518 Cr', label: 'FY25 revenue' },
+  { value: '300+', label: 'stores nationwide', footnote: 1 },
+  { value: '50/50', label: 'online to offline split', footnote: 1 },
+  { value: '5 to 6 months', label: 'gifting repurchase cycle', footnote: 3 },
+  { value: 'Rs.518 Cr', label: 'FY25 revenue', footnote: 1 },
 ]
 
 function CardHover({ children, style = {} }) {
@@ -135,6 +142,7 @@ export default function TheBrand() {
                   }}
                 >
                   {card.stat}
+                  {card.statFootnote && <Footnote n={card.statFootnote} />}
                 </div>
                 <p
                   style={{
@@ -146,6 +154,7 @@ export default function TheBrand() {
                   }}
                 >
                   {card.context}
+                  {card.contextFootnote && <Footnote n={card.contextFootnote} />}
                 </p>
               </CardHover>
             </FadeIn>
@@ -164,7 +173,8 @@ export default function TheBrand() {
                 margin: 0,
               }}
             >
-              Customers come back every five to six months, driven by gifting occasions.
+              Customers come back every five to six months, driven by gifting occasions
+              <Footnote n={3} />.
             </p>
             <p
               style={{
@@ -215,6 +225,7 @@ export default function TheBrand() {
                     }}
                   >
                     {s.value}
+                    <Footnote n={s.footnote} />
                   </div>
                   <div
                     style={{

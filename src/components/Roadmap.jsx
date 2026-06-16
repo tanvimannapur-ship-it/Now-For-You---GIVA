@@ -7,6 +7,7 @@ const METRICS = [
     metric: 'Self-purchase category entry rate',
     desc: 'Are gifting-entry customers navigating to everyday wear, rings, or earrings during non-occasion windows? The first sign the mental model is beginning to shift.',
     dots: 1,
+    target: 'Self-purchase category entry rate rises from an estimated 12-15% baseline to 20-25% among gifting-entry customers',
   },
   {
     tier: 'TIER 2',
@@ -14,6 +15,7 @@ const METRICS = [
     metric: 'Unprompted browse sessions with depth',
     desc: 'Gifting-entry customers returning with no campaign trigger, spending over 90 seconds, viewing more than 3 pages. Pull behaviour, not push behaviour.',
     dots: 2,
+    target: 'Unprompted browse sessions with depth rise from an estimated 5-7% baseline to 9-12%. Pull behaviour, not push',
   },
   {
     tier: 'TIER 3',
@@ -21,6 +23,7 @@ const METRICS = [
     metric: 'Wishlist saves in self-purchase categories',
     desc: 'An explicit statement of personal desire. Requires active intent. The strongest leading indicator before any transaction occurs.',
     dots: 3,
+    target: 'Wishlist saves in self-purchase categories reach 3-5% of gifting-entry customers, up from near zero with no current mechanism',
   },
 ]
 
@@ -136,10 +139,6 @@ export default function Roadmap() {
                   border: '1px solid #F0E8EC',
                   borderRadius: '16px',
                   padding: '24px 28px',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'flex-start',
-                  gap: '20px',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
                 }}
@@ -152,22 +151,45 @@ export default function Roadmap() {
                   e.currentTarget.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)'
                 }}
               >
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: '10px', fontFamily: 'Inter, sans-serif', color: '#9E8E93', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>
-                    {m.tier}
-                  </p>
-                  <p style={{ fontSize: '10px', fontFamily: 'Inter, sans-serif', color: '#C94A6E', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '4px 0 0' }}>
-                    {m.signal}
-                  </p>
-                  <p style={{ fontSize: '18px', fontFamily: 'Inter, sans-serif', fontWeight: 600, color: '#1A1A1A', margin: '8px 0 0' }}>
-                    {m.metric}
-                  </p>
-                  <p style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif', color: '#6B6B6B', margin: '6px 0 0', maxWidth: '480px', lineHeight: 1.6 }}>
-                    {m.desc}
-                  </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '20px' }}>
+                  <div style={{ flex: 1 }}>
+                    <p style={{ fontSize: '10px', fontFamily: 'Inter, sans-serif', color: '#9E8E93', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>
+                      {m.tier}
+                    </p>
+                    <p style={{ fontSize: '10px', fontFamily: 'Inter, sans-serif', color: '#C94A6E', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '4px 0 0' }}>
+                      {m.signal}
+                    </p>
+                    <p style={{ fontSize: '18px', fontFamily: 'Inter, sans-serif', fontWeight: 600, color: '#1A1A1A', margin: '8px 0 0' }}>
+                      {m.metric}
+                    </p>
+                    <p style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif', color: '#6B6B6B', margin: '6px 0 0', maxWidth: '480px', lineHeight: 1.6 }}>
+                      {m.desc}
+                    </p>
+                  </div>
+                  <div style={{ flexShrink: 0, paddingTop: '4px' }}>
+                    <DotIndicator filled={m.dots} total={3} />
+                  </div>
                 </div>
-                <div style={{ flexShrink: 0, paddingTop: '4px' }}>
-                  <DotIndicator filled={m.dots} total={3} />
+
+                <div
+                  style={{
+                    marginTop: '16px',
+                    paddingTop: '16px',
+                    borderTop: '1px solid #F0E8EC',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                  }}
+                >
+                  <span style={{ fontSize: '16px', color: '#C94A6E', flexShrink: 0 }}>&#9678;</span>
+                  <div>
+                    <p style={{ fontSize: '10px', fontFamily: 'Inter, sans-serif', color: '#9E8E93', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>
+                      90-Day Target
+                    </p>
+                    <p style={{ fontSize: '13px', fontFamily: 'Inter, sans-serif', fontWeight: 500, color: '#1A1A1A', margin: '2px 0 0', lineHeight: 1.5 }}>
+                      {m.target}
+                    </p>
+                  </div>
                 </div>
               </div>
             </FadeIn>

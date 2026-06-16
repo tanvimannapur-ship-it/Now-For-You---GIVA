@@ -5,7 +5,9 @@ import TheBrand from './components/TheBrand'
 import TheProblem from './components/TheProblem'
 import TheInsight from './components/TheInsight'
 import NowForYou from './components/NowForYou'
+import TheOpportunity from './components/TheOpportunity'
 import Roadmap from './components/Roadmap'
+import Sources from './components/Sources'
 import AboutTanvi from './components/AboutTanvi'
 import Footer from './components/Footer'
 
@@ -20,7 +22,9 @@ export default function App() {
         <TheProblem />
         <TheInsight />
         <NowForYou />
+        <TheOpportunity />
         <Roadmap />
+        <Sources />
         <AboutTanvi />
       </main>
       <Footer />

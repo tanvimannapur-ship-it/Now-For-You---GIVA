@@ -222,6 +222,51 @@ export default function NowForYou() {
             Each expression is calibrated to what that surface can do.
             Together, they create the first moment in GIVA's experience that says: this one is for you.
           </p>
+
+          <div
+            style={{
+              background: 'transparent',
+              borderLeft: '3px solid rgba(255,255,255,0.2)',
+              padding: '12px 0 12px 16px',
+              margin: '24px auto 0',
+              maxWidth: '600px',
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '12px',
+              textAlign: 'left',
+              position: 'relative',
+              zIndex: 1,
+            }}
+          >
+            <span
+              style={{
+                width: '20px',
+                height: '20px',
+                flexShrink: 0,
+                background: 'rgba(255,255,255,0.08)',
+                color: 'rgba(255,255,255,0.6)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '11px',
+                marginTop: '2px',
+              }}
+            >
+              !
+            </span>
+            <p
+              style={{
+                fontSize: '13px',
+                fontFamily: 'Inter, sans-serif',
+                color: 'rgba(255,255,255,0.55)',
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
+              The primary execution risk is tone. A self-purchase prompt immediately after a gifting purchase can feel transactional if the copy is wrong. The experiment will track module dismissal rates alongside the three leading indicators. If dismissals exceed 20% in Phase 1, copy and placement iterate before any scale decision.
+            </p>
+          </div>
         </FadeIn>
       </section>
 
