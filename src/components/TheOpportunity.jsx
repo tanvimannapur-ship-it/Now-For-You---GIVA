@@ -6,21 +6,24 @@ const SCENARIOS = [
     label: 'CONSERVATIVE CASE',
     lift: '15% relative lift',
     purchasers: '~3,750 new self-purchasers',
-    gmv: 'Rs.9 Cr',
+    gmv: 'Rs.94 L',
+    reframe: '~23x return on Phase 1 build cost',
     highlight: false,
   },
   {
     label: 'BASE CASE',
     lift: '30% relative lift',
     purchasers: '~7,500 new self-purchasers',
-    gmv: 'Rs.19 Cr',
+    gmv: 'Rs.1.9 Cr',
+    reframe: '~47x return on Phase 1 build cost',
     highlight: true,
   },
   {
     label: 'OPTIMISTIC CASE',
     lift: '50% relative lift',
     purchasers: '~12,500 new self-purchasers',
-    gmv: 'Rs.31 Cr',
+    gmv: 'Rs.3.1 Cr',
+    reframe: '~75x return on Phase 1 build cost',
     highlight: false,
   },
 ]
@@ -41,6 +44,10 @@ const ASSUMPTIONS = [
   {
     text: 'LTV note: published research shows gift purchasers who make a self-purchase show 63% higher downstream sales vs matched non-gift purchasers. Year 1 GMV understates total impact',
     footnote: 5,
+  },
+  {
+    text: 'Phase 1 build cost: estimated at Rs.4 lakhs (approximately 2 to 3 weeks of one senior engineer\'s time). ROI multiples above are calculated against this figure.',
+    footnote: null,
   },
 ]
 
@@ -175,6 +182,19 @@ export default function TheOpportunity() {
                   }}
                 >
                   {s.gmv}
+                </p>
+                <p
+                  style={{
+                    fontSize: '12px',
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: 600,
+                    color: '#C94A6E',
+                    textAlign: 'center',
+                    marginTop: '6px',
+                    marginBottom: '4px',
+                  }}
+                >
+                  {s.reframe}
                 </p>
                 <p
                   style={{
